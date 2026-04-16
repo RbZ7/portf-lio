@@ -2,13 +2,22 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Portfólio | Robert Carreira</title>
 
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
 
-    body { display: flex; background: #0f172a; color: white; }
+    body {
+      display: flex;
+      background: #0f172a;
+      color: white;
+    }
 
     /* SIDEBAR */
     .sidebar {
@@ -29,8 +38,8 @@
       height: 120px;
       border-radius: 50%;
       object-fit: cover;
-      margin-bottom: 10px;
       border: 3px solid #2563eb;
+      margin-bottom: 10px;
     }
 
     .menu a {
@@ -38,8 +47,8 @@
       padding: 12px;
       color: #cbd5f5;
       text-decoration: none;
-      transition: 0.3s;
       border-radius: 8px;
+      transition: 0.3s;
     }
 
     .menu a:hover {
@@ -53,6 +62,7 @@
       width: 100%;
     }
 
+    /* HERO */
     .hero {
       height: 100vh;
       background: url('https://images.unsplash.com/photo-1518770660439-4636190af475') center/cover;
@@ -68,7 +78,7 @@
       position: absolute;
       width: 100%;
       height: 100%;
-      background: rgba(0,0,0,0.6);
+      background: rgba(0,0,0,0.7);
     }
 
     .hero-content {
@@ -77,8 +87,12 @@
     }
 
     .hero h1 {
-      font-size: 48px;
-      margin: 10px 0;
+      font-size: 52px;
+      margin-bottom: 10px;
+    }
+
+    .hero span {
+      color: #2563eb;
     }
 
     .hero p {
@@ -102,17 +116,46 @@
       color: white;
     }
 
+    /* SECTION */
     .section {
       padding: 60px 40px;
       background: #111827;
     }
 
-    h2 { margin-bottom: 20px; }
-
-    .sobre img {
-      width: 200px;
-      border-radius: 12px;
+    h2 {
       margin-bottom: 20px;
+      font-size: 28px;
+    }
+
+    /* SOBRE */
+    .sobre p {
+      max-width: 700px;
+      margin-bottom: 15px;
+    }
+
+    /* CARDS */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: #1e293b;
+      padding: 20px;
+      border-radius: 12px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      background: #334155;
+    }
+
+    /* CONTATO */
+    #contato p {
+      margin-bottom: 10px;
     }
 
   </style>
@@ -129,7 +172,7 @@
 
     <div class="menu">
       <a href="#inicio">Início</a>
-      <a href="#sobre">Sobre mim</a>
+      <a href="#sobre">Sobre</a>
       <a href="#projetos">Projetos</a>
       <a href="#contato">Contato</a>
     </div>
@@ -141,8 +184,8 @@
     <!-- HERO -->
     <section id="inicio" class="hero">
       <div class="hero-content">
-        <p>Bem-vindo</p>
-        <h1>Desenvolvedor Web & Mobile</h1>
+        <h1>Olá, eu sou <span>Robert</span></h1>
+        <p>Desenvolvedor Web & Mobile focado em soluções modernas</p>
         <a href="#contato" class="btn">Fale comigo</a>
       </div>
     </section>
@@ -150,22 +193,38 @@
     <!-- SOBRE -->
     <section id="sobre" class="section sobre">
       <h2>Sobre Mim</h2>
-      <p>Sou Robert Carreira, estudante de Ciência da Computação com foco em desenvolvimento web e mobile. Tenho experiência com Python, C++, HTML, JavaScript e React Native, criando projetos práticos como o EcoTroca e sistemas de agendamento.</p>
-      <p>Busco evoluir constantemente minhas habilidades e conquistar minha primeira oportunidade como desenvolvedor, contribuindo com soluções eficientes e inovadoras.</p>
+      <p>Sou estudante de Ciência da Computação com foco em desenvolvimento web e mobile.</p>
+      <p>Tenho experiência com Python, C++, HTML, JavaScript e React Native, desenvolvendo projetos práticos como o EcoTroca e sistemas de agendamento.</p>
+      <p>Busco minha primeira oportunidade como desenvolvedor para evoluir profissionalmente e contribuir com soluções reais.</p>
     </section>
 
     <!-- PROJETOS -->
     <section id="projetos" class="section">
       <h2>Projetos</h2>
 
-      <p><strong>EcoTroca (React Native):</strong> Aplicativo mobile focado em sustentabilidade e troca consciente de produtos. Desenvolvido com foco em experiência do usuário, organização de componentes e boas práticas de desenvolvimento mobile.</p>
+      <div class="cards">
 
-      <p><strong>Sistema de Agendamento (HTML, JavaScript):</strong> Plataforma web para gerenciamento de consultas em clínicas médicas. Permite organização de horários, melhor controle de atendimentos e simula um sistema real utilizado no mercado.</p>
+        <div class="card">
+          <h3>EcoTroca</h3>
+          <p>Aplicativo mobile sustentável desenvolvido em React Native.</p>
+        </div>
 
-      <p><strong>Projetos em Python:</strong> Desenvolvimento de aplicações voltadas para lógica de programação e automação de tarefas. Utilização de estruturas de dados, controle de fluxo e resolução de problemas práticos.</p>
+        <div class="card">
+          <h3>Agendamento</h3>
+          <p>Sistema web para clínicas com HTML e JavaScript.</p>
+        </div>
 
-      <p><strong>Projetos em Java:</strong> Aplicações voltadas para reforço de lógica e orientação a objetos, com foco em organização de código, reutilização e boas práticas de desenvolvimento backend.</p>
+        <div class="card">
+          <h3>Python</h3>
+          <p>Automação e lógica de programação.</p>
+        </div>
 
+        <div class="card">
+          <h3>Java</h3>
+          <p>Aplicações com orientação a objetos.</p>
+        </div>
+
+      </div>
     </section>
 
     <!-- CONTATO -->
