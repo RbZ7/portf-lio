@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfólio | Robert Carreira</title>
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+
+    body { display: flex; background: #0f172a; color: white; }
+
+    /* SIDEBAR */
+    .sidebar {
+      width: 260px;
+      height: 100vh;
+      background: #020617;
+      padding: 20px;
+      position: fixed;
+    }
+
+    .perfil {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .perfil img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+      border: 3px solid #2563eb;
+    }
+
+    .menu a {
+      display: block;
+      padding: 12px;
+      color: #cbd5f5;
+      text-decoration: none;
+      transition: 0.3s;
+      border-radius: 8px;
+    }
+
+    .menu a:hover {
+      background: #2563eb;
+      color: white;
+    }
+
+    /* MAIN */
+    .main {
+      margin-left: 260px;
+      width: 100%;
+    }
+
+    .hero {
+      height: 100vh;
+      background: url('https://images.unsplash.com/photo-1518770660439-4636190af475') center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin: 10px 0;
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: #cbd5f5;
+    }
+
+    .btn {
+      margin-top: 20px;
+      padding: 12px 24px;
+      border: 2px solid #ef4444;
+      color: #ef4444;
+      border-radius: 25px;
+      text-decoration: none;
+      transition: 0.3s;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background: #ef4444;
+      color: white;
+    }
+
+    .section {
+      padding: 60px 40px;
+      background: #111827;
+    }
+
+    h2 { margin-bottom: 20px; }
+
+    .sobre img {
+      width: 200px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <div class="perfil">
+      <img src="robertLin.jfif" alt="Robert">
+      <h2>Robert Carreira</h2>
+    </div>
+
+    <div class="menu">
+      <a href="#inicio">Início</a>
+      <a href="#sobre">Sobre mim</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#contato">Contato</a>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <div class="main">
+
+    <!-- HERO -->
+    <section id="inicio" class="hero">
+      <div class="hero-content">
+        <p>Bem-vindo</p>
+        <h1>Desenvolvedor Web & Mobile</h1>
+        <a href="#contato" class="btn">Fale comigo</a>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre" class="section sobre">
+      <h2>Sobre Mim</h2>
+      <p>Sou Robert Carreira, estudante de Ciência da Computação com foco em desenvolvimento web e mobile. Tenho experiência com Python, C++, HTML, JavaScript e React Native, criando projetos práticos como o EcoTroca e sistemas de agendamento.</p>
+      <p>Busco evoluir constantemente minhas habilidades e conquistar minha primeira oportunidade como desenvolvedor, contribuindo com soluções eficientes e inovadoras.</p>
+    </section>
+
+    <!-- PROJETOS -->
+    <section id="projetos" class="section">
+      <h2>Projetos</h2>
+
+      <p><strong>EcoTroca (React Native):</strong> Aplicativo mobile focado em sustentabilidade e troca consciente de produtos. Desenvolvido com foco em experiência do usuário, organização de componentes e boas práticas de desenvolvimento mobile.</p>
+
+      <p><strong>Sistema de Agendamento (HTML, JavaScript):</strong> Plataforma web para gerenciamento de consultas em clínicas médicas. Permite organização de horários, melhor controle de atendimentos e simula um sistema real utilizado no mercado.</p>
+
+      <p><strong>Projetos em Python:</strong> Desenvolvimento de aplicações voltadas para lógica de programação e automação de tarefas. Utilização de estruturas de dados, controle de fluxo e resolução de problemas práticos.</p>
+
+      <p><strong>Projetos em Java:</strong> Aplicações voltadas para reforço de lógica e orientação a objetos, com foco em organização de código, reutilização e boas práticas de desenvolvimento backend.</p>
+
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="section">
+      <h2>Contato</h2>
+      <p>Email: robert@example.com</p>
+      <p>LinkedIn: linkedin.com/in/robertcarreira</p>
+    </section>
+
+  </div>
+
+</body>
+</html>
